@@ -1,0 +1,32 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  # v4.1.0 is the last version that supports python<3.7
+  # See https://github.com/pre-commit/pre-commit-hooks/releases/tag/v4.2.0
+  rev: v4.4.0
+  hooks:
+  - id: check-yaml
+  - id: detect-aws-credentials
+  - id: detect-private-key
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
+- repo: https://github.com/pycqa/flake8
+  # 5.0.4 is the last version that supports python<3.8
+  # See https://flake8.pycqa.org/en/latest/release-notes/6.0.0.html#features
+  rev: 6.0.0
+  hooks:
+  - id: flake8
+- repo: https://github.com/psf/black
+  # 22.8.0 is the last version that supports python 3.6
+  # See https://black.readthedocs.io/en/stable/faq.html#which-python-versions-does-black-support
+  rev: 23.3.0
+  hooks:
+  - id: black
+- repo: https://github.com/pycqa/isort
+  # 5.10.1 is the last version that supports python 3.6
+  # See https://github.com/PyCQA/isort/releases/tag/5.11.0
+  rev: 5.12.0
+  hooks:
+    - id: isort
