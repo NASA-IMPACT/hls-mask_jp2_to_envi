@@ -1,0 +1,5 @@
+*
+!hls_mask_jp2_to_envi/
+!tests/
+!setup.py
+!tox.ini
